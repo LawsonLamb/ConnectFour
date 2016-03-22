@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour {
 
     public GameBoard _board;
-    public Board b;
+   // public TestBoard b;
     public int RedScore = 0;
     public int BlackScore = 0;
     public static int ROW;
@@ -58,10 +58,16 @@ public class GameManager : MonoBehaviour {
         {
 
             currentType = TileType.Red;
-            int[] move = b.Move(currentType);
-            _board.PlaceTile(move[1], currentType);
+           int[] move = _board.Move(currentType);
+            if (move[1] >= 0)
+            {
+                _board.PlaceTile(move[1], currentType);
+            }
+            else {
+                print("Couldnt find move");
+                }
 
-            turn = !turn;
+          turn = !turn;
 
         }
 
@@ -123,7 +129,12 @@ public class GameManager : MonoBehaviour {
         {
             _board.EvaluateBoard(currentType);
         }
+
+
+
         ChangeTurn();
+
+
         switch (currentType)
         {
 
