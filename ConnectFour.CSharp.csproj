@@ -70,11 +70,10 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MiniMax\Board.cs" />
     <Compile Include="Assets\Scripts\MiniMax\Node.cs" />
+    <Compile Include="Assets\Scripts\UI\CameraEditor.cs" />
     <Compile Include="Assets\Scripts\UI\DebugMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreUI.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
